@@ -1,0 +1,12 @@
+version: '1'
+services:
+  node-server:
+    build: .
+    ports:
+      - '3333:3333'
+    command: 'npm start'
+    logging:
+      driver: 'json-file'
+      options:
+        max-size: '10m'
+        max-file: '3'
